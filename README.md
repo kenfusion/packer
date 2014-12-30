@@ -1,4 +1,4 @@
-##Using packer to create minimal base boxes for vagrant
+###Using packer to create minimal base boxes for vagrant
 
 - [ ] Minimal install by OS
   - [ ] Centos
