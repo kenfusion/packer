@@ -34,12 +34,13 @@
         "scripts": [
             "scripts/vagrant.sh",
             "scripts/virtualbox.sh",
+            "scripts/centos-python2.7.9-altinstall.sh",
             "scripts/network.sh",
             "scripts/compact.sh"
         ]
     }],
     "post-processors": [{
-        "output": "boxes/centos-6.6-64-min.box",
+        "output": "boxes/centos-6.6-64-python2.7-altinstall.box",
         "type": "vagrant"
     }]	
 }
