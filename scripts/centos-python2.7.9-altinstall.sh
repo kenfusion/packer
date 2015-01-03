@@ -24,5 +24,12 @@ make altinstall
 
 /usr/local/bin/python2.7 -m pip install virtualenvwrapper
 
-yum clean all
-rm -rf /tmp/Python-2.7.9
+rm -rf /tmp/Python-2.7.9*
+
+cat << EOF >> /home/vagrant/.bash_profile
+export WORKON_HOME=\$HOME/.virtualenvs
+export PROJECT_HOME=\$HOME/MyProjects
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python2.7
+source /usr/local/bin/virtualenvwrapper.sh
+EOF
+
