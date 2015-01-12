@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 # http://eemyop.blogspot.com/2013/04/gae-on-rhel-63-building-python-27-from.html
 
 set -e
