@@ -42,7 +42,6 @@
         }
     ],
     "post-processors" : [{
-            "output" : "boxes/centos-6.6-64-python2.7-altinstall.box",
             "type" : "vagrant"
         }
     ]

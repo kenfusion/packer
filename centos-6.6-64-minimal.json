@@ -41,7 +41,6 @@
         }
     ],
     "post-processors" : [{
-            "output" : "boxes/centos-6.6-64-min.box",
             "type" : "vagrant"
         }
     ]
