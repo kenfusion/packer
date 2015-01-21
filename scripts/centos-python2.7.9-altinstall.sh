@@ -3,7 +3,7 @@
 
 set -e
 
-yum install -y zlib-dev openssl-devel sqlite-devel bzip2-devel xz-libs tk-devel gdbm-devel ncurses-devel readline-devel xz
+yum install -y openssl-devel sqlite-devel bzip2-devel xz-libs tk-devel gdbm-devel ncurses-devel readline-devel xz
 
 cd /tmp
 
