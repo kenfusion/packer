@@ -7,24 +7,19 @@ yum install -y openssl-devel sqlite-devel bzip2-devel xz-libs tk-devel gdbm-deve
 
 cd /tmp
 
-wget -q http://www.python.org/ftp/python/2.7.9/Python-2.7.9.tar.xz
+wget -q https://www.python.org/ftp/python/2.7.11/Python-2.7.11.tar.xz
 
-xz -d Python-2.7.9.tar.xz
-tar -xf Python-2.7.9.tar
-cd Python-2.7.9
+xz -d Python-2.7.11.tar.xz
+tar -xf Python-2.7.11.tar
+cd Python-2.7.11
 ./configure --prefix=/usr/local
 make
 make altinstall
 
-# trying out builtin pip on 2.7.9
-
-/usr/local/bin/python2.7 -m ensurepip
-
-/usr/local/bin/python2.7 -m pip install virtualenv
-
+/usr/local/bin/python2.7 -m ensurepip --upgrade
 /usr/local/bin/python2.7 -m pip install virtualenvwrapper
 
-rm -rf /tmp/Python-2.7.9*
+rm -rf /tmp/Python-2.7.11
 
 mkdir /home/vagrant/{develop,.virtualenvs}
 chown vagrant:vagrant /home/vagrant/{develop,.virtualenvs}

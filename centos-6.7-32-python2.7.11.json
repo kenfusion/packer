@@ -35,7 +35,7 @@
             "scripts" : [
                 "scripts/vagrant.sh",
                 "scripts/virtualbox.sh",
-                "scripts/centos-python2.7.9-altinstall.sh",
+                "scripts/centos-python2.7.11-altinstall.sh",
                 "scripts/network.sh",
                 "scripts/compact.sh"
             ]
