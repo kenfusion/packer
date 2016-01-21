@@ -17,9 +17,10 @@ make
 make altinstall
 
 /usr/local/bin/python2.7 -m ensurepip --upgrade
+/usr/local/bin/python2.7 -m pip install --upgrade pip
 /usr/local/bin/python2.7 -m pip install virtualenvwrapper
 
-rm -rf /tmp/Python-2.7.11
+rm -rf /tmp/Python-2.7.11*
 
 mkdir /home/vagrant/{develop,.virtualenvs}
 chown vagrant:vagrant /home/vagrant/{develop,.virtualenvs}
