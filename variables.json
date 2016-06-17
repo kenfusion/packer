@@ -1,0 +1,8 @@
+{
+  "32_bit_iso_url" : "http://mirrors.kernel.org/centos/6.8/isos/i386/CentOS-6.8-i386-minimal.iso",
+  "32_bit_iso_checksum" : "810446eb788f467338f69fa4601d61395aada223",
+  "32_bit_iso_checksum_type" : "sha1",
+  "64_bit_iso_url" : "http://mirrors.kernel.org/centos/6.8/isos/x86_64/CentOS-6.8-x86_64-minimal.iso",
+  "64_bit_iso_checksum" : "28cd663c2267676414496f0929ce7bb285bf2506",
+  "64_bit_iso_checksum_type" : "sha1"
+}
