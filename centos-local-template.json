@@ -127,13 +127,11 @@
 	"provisioners": [{
 		"only": ["32_py", "64_py"],
 		"type": "shell",
-		"execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
-		"scripts": [
-			"scripts/centos-python2.7.11-altinstall.sh"
-		]
+		"execute_command": "sudo -iu vagrant bash '{{.Path}}'",
+		"script": "scripts/pyenv-install.sh"
 	}, {
 		"type": "shell",
-		"execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
+	  "execute_command": "sudo bash '{{.Path}}'",
 		"scripts": [
 			"scripts/vagrant.sh",
 			"scripts/virtualbox.sh",
