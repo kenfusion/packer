@@ -5,7 +5,8 @@
 		"32_bit_iso_checksum_type": "",
     "64_bit_iso_url": "",
 		"64_bit_iso_checksum": "",
-		"64_bit_iso_checksum_type": ""
+		"64_bit_iso_checksum_type": "",
+		"PY_VERSIONS:": ""
 	},
 	"builders": [{
 		"name": "32_min",
@@ -127,8 +128,11 @@
 	"provisioners": [{
 		"only": ["32_py", "64_py"],
 		"type": "shell",
-		"execute_command": "sudo -iu vagrant bash '{{.Path}}'",
-		"script": "scripts/pyenv-install.sh"
+		"execute_command": "chmod +x {{ .Path }}; sudo -iu vagrant {{ .Vars }} {{ .Path }}",
+		"script": "scripts/pyenv-install.sh",
+		"environment_vars": [
+			"PY_VERSIONS={{user `PY_VERSIONS`}}"
+		]
 	}, {
 		"type": "shell",
 	  "execute_command": "sudo bash '{{.Path}}'",

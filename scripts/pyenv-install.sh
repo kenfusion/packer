@@ -12,8 +12,15 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 #Install python 2 and 3
-pyenv install 2.7.12
-pyenv install 3.5.2
+
+if [ ! -z ${PY_VERSIONS+x} ]; then
+  for version in $PY_VERSIONS; do
+    pyenv install $version
+  done
+else
+  echo "PY_VERSIONS not set"
+fi
+
 
 #Set up shell
 cat << 'EOF' > "$HOME"/.pyenvrc

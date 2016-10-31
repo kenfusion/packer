@@ -4,6 +4,7 @@
   "32_bit_iso_checksum_type" : "sha1",
   "64_bit_iso_url" : "http://mirrors.kernel.org/centos/6.8/isos/x86_64/CentOS-6.8-x86_64-minimal.iso",
   "64_bit_iso_checksum" : "28cd663c2267676414496f0929ce7bb285bf2506",
-  "64_bit_iso_checksum_type" : "sha1"
+  "64_bit_iso_checksum_type" : "sha1",
+  "PY_VERSIONS" : "2.7.12 3.5.2"
 }
 
