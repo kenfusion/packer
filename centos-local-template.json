@@ -1,44 +1,15 @@
 {
 	"variables": {
-		"32_bit_iso_url": "",
-		"32_bit_iso_checksum": "",
-		"32_bit_iso_checksum_type": "",
-    "64_bit_iso_url": "",
-		"64_bit_iso_checksum": "",
-		"64_bit_iso_checksum_type": "",
+		"Centos6_iso_url": "",
+		"Centos6_iso_checksum": "",
+		"Centos6_iso_checksum_type": "",
+    "Centos7_url": "",
+		"Centos7_checksum": "",
+		"Centos7_checksum_type": "",
 		"PY_VERSIONS:": ""
 	},
 	"builders": [{
-		"name": "32_min",
-		"type": "virtualbox-iso",
-		"virtualbox_version_file": ".vbox_version",
-		"guest_os_type": "RedHat",
-		"disk_size": 20960,
-		"hard_drive_interface": "sata",
-		"vboxmanage": [
-			["modifyvm", "{{.Name}}", "--memory", "512"],
-			["modifyvm", "{{.Name}}", "--cpus", "1"],
-			["modifyvm", "{{.Name}}", "--audio", "null"]
-		],
-
-		"http_directory": "http",
-		"iso_url": "{{user `32_bit_iso_url`}}",
-		"iso_checksum": "{{user `32_bit_iso_checksum`}}",
-		"iso_checksum_type": "{{user `32_bit_iso_checksum_type`}}",
-
-		"boot_wait": "10s",
-		"boot_command": [
-			"<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/centos/ks.cfg<enter><wait>"
-		],
-
-		"ssh_username": "vagrant",
-		"ssh_password": "vagrant",
-		"ssh_port": 22,
-		"ssh_wait_timeout": "10000s",
-
-		"shutdown_command": "echo 'vagrant'|sudo -S /sbin/shutdown -h now"
-	}, {
-		"name": "64_min",
+		"name": "Centos6_min",
 		"type": "virtualbox-iso",
 		"virtualbox_version_file": ".vbox_version",
 		"guest_os_type": "RedHat_64",
@@ -51,9 +22,9 @@
 		],
 
 		"http_directory": "http",
-		"iso_url": "{{user `64_bit_iso_url`}}",
-		"iso_checksum": "{{user `64_bit_iso_checksum`}}",
-		"iso_checksum_type": "{{user `64_bit_iso_checksum_type`}}",
+		"iso_url": "{{user `Centos6_iso_url`}}",
+		"iso_checksum": "{{user `Centos6_iso_checksum`}}",
+		"iso_checksum_type": "{{user `Centos6_iso_checksum_type`}}",
 
 		"boot_wait": "10s",
 		"boot_command": [
@@ -67,36 +38,7 @@
 
 		"shutdown_command": "echo 'vagrant'|sudo -S /sbin/shutdown -h now"
 	}, {
-		"name": "32_py",
-		"type": "virtualbox-iso",
-		"virtualbox_version_file": ".vbox_version",
-		"guest_os_type": "RedHat",
-		"disk_size": 20960,
-		"hard_drive_interface": "sata",
-		"vboxmanage": [
-			["modifyvm", "{{.Name}}", "--memory", "512"],
-			["modifyvm", "{{.Name}}", "--cpus", "1"],
-			["modifyvm", "{{.Name}}", "--audio", "null"]
-		],
-
-		"http_directory": "http",
-		"iso_url": "{{user `32_bit_iso_url`}}",
-		"iso_checksum": "{{user `32_bit_iso_checksum`}}",
-		"iso_checksum_type": "{{user `32_bit_iso_checksum_type`}}",
-
-		"boot_wait": "10s",
-		"boot_command": [
-			"<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/centos/ks.cfg<enter><wait>"
-		],
-
-		"ssh_username": "vagrant",
-		"ssh_password": "vagrant",
-		"ssh_port": 22,
-		"ssh_wait_timeout": "10000s",
-
-		"shutdown_command": "echo 'vagrant'|sudo -S /sbin/shutdown -h now"
-	}, {
-		"name": "64_py",
+		"name": "Centos7_min",
 		"type": "virtualbox-iso",
 		"virtualbox_version_file": ".vbox_version",
 		"guest_os_type": "RedHat_64",
@@ -109,9 +51,67 @@
 		],
 
 		"http_directory": "http",
-		"iso_url": "{{user `64_bit_iso_url`}}",
-		"iso_checksum": "{{user `64_bit_iso_checksum`}}",
-		"iso_checksum_type": "{{user `64_bit_iso_checksum_type`}}",
+		"iso_url": "{{user `Centos7_iso_url`}}",
+		"iso_checksum": "{{user `Centos7_iso_checksum`}}",
+		"iso_checksum_type": "{{user `Centos7_iso_checksum_type`}}",
+
+		"boot_wait": "10s",
+		"boot_command": [
+			"<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/centos/ks.cfg<enter><wait>"
+		],
+
+		"ssh_username": "vagrant",
+		"ssh_password": "vagrant",
+		"ssh_port": 22,
+		"ssh_wait_timeout": "10000s",
+
+		"shutdown_command": "echo 'vagrant'|sudo -S /sbin/shutdown -h now"
+	}, {
+		"name": "Centos6_py",
+		"type": "virtualbox-iso",
+		"virtualbox_version_file": ".vbox_version",
+		"guest_os_type": "RedHat_64",
+		"disk_size": 20960,
+		"hard_drive_interface": "sata",
+		"vboxmanage": [
+			["modifyvm", "{{.Name}}", "--memory", "512"],
+			["modifyvm", "{{.Name}}", "--cpus", "1"],
+			["modifyvm", "{{.Name}}", "--audio", "null"]
+		],
+
+		"http_directory": "http",
+		"iso_url": "{{user `Centos6_iso_url`}}",
+		"iso_checksum": "{{user `Centos6_iso_checksum`}}",
+		"iso_checksum_type": "{{user `Centos6_iso_checksum_type`}}",
+
+		"boot_wait": "10s",
+		"boot_command": [
+			"<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/centos/ks.cfg<enter><wait>"
+		],
+
+		"ssh_username": "vagrant",
+		"ssh_password": "vagrant",
+		"ssh_port": 22,
+		"ssh_wait_timeout": "10000s",
+
+		"shutdown_command": "echo 'vagrant'|sudo -S /sbin/shutdown -h now"
+	}, {
+		"name": "Centos7_py",
+		"type": "virtualbox-iso",
+		"virtualbox_version_file": ".vbox_version",
+		"guest_os_type": "RedHat_64",
+		"disk_size": 20960,
+		"hard_drive_interface": "sata",
+		"vboxmanage": [
+			["modifyvm", "{{.Name}}", "--memory", "512"],
+			["modifyvm", "{{.Name}}", "--cpus", "1"],
+			["modifyvm", "{{.Name}}", "--audio", "null"]
+		],
+
+		"http_directory": "http",
+		"iso_url": "{{user `Centos7_iso_url`}}",
+		"iso_checksum": "{{user `Centos7_iso_checksum`}}",
+		"iso_checksum_type": "{{user `Centos7_iso_checksum_type`}}",
 
 		"boot_wait": "10s",
 		"boot_command": [
@@ -126,7 +126,7 @@
 		"shutdown_command": "echo 'vagrant'|sudo -S /sbin/shutdown -h now"
 	}],
 	"provisioners": [{
-		"only": ["32_py", "64_py"],
+		"only": ["Centos6_py", "Centos7_py"],
 		"type": "shell",
 		"execute_command": "chmod +x {{ .Path }}; sudo -iu vagrant {{ .Vars }} {{ .Path }}",
 		"script": "scripts/pyenv-install.sh",
