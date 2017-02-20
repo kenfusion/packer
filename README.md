@@ -2,9 +2,8 @@
 
 - [ ] Minimal install by OS
   - [ ] Centos
-    - [x] 6.6-32
-    - [x] 6.6-64
-    - [ ] 7
+    - [x] 6
+    - [x] 7
   - [ ] Ubuntu
     - [ ] 14.04
 
