@@ -1,6 +1,6 @@
 {
-  "Centos6_iso_url" : "http://mirrors.kernel.org/centos/6.8/isos/x86_64/CentOS-6.8-x86_64-minimal.iso",
-  "Centos6_iso_checksum" : "28cd663c2267676414496f0929ce7bb285bf2506",
+  "Centos6_iso_url" : "http://mirrors.kernel.org/centos/6.9/isos/x86_64/CentOS-6.9-x86_64-minimal.iso",
+  "Centos6_iso_checksum_url" : "http://mirrors.kernel.org/centos/6/isos/x86_64/sha1sum.txt",
   "Centos6_iso_checksum_type" : "sha1",
   "Centos7_iso_url" : "http://mirrors.kernel.org/centos/7/isos/x86_64/CentOS-7-x86_64-Minimal-1611.iso",
   "Centos7_iso_checksum" : "71a7aa147877b413497cdff5b1e0aa5bc0c9484f",

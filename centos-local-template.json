@@ -1,7 +1,7 @@
 {
 	"variables": {
 		"Centos6_iso_url": "",
-		"Centos6_iso_checksum": "",
+		"Centos6_iso_checksum_url": "",
 		"Centos6_iso_checksum_type": "",
     "Centos7_url": "",
 		"Centos7_checksum": "",
@@ -23,7 +23,7 @@
 
 		"http_directory": "http",
 		"iso_url": "{{user `Centos6_iso_url`}}",
-		"iso_checksum": "{{user `Centos6_iso_checksum`}}",
+		"iso_checksum_url": "{{user `Centos6_iso_checksum_url`}}",
 		"iso_checksum_type": "{{user `Centos6_iso_checksum_type`}}",
 
 		"boot_wait": "10s",
@@ -81,7 +81,7 @@
 
 		"http_directory": "http",
 		"iso_url": "{{user `Centos6_iso_url`}}",
-		"iso_checksum": "{{user `Centos6_iso_checksum`}}",
+		"iso_checksum_url": "{{user `Centos6_iso_checksum_url`}}",
 		"iso_checksum_type": "{{user `Centos6_iso_checksum_type`}}",
 
 		"boot_wait": "10s",
