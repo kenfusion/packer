@@ -202,17 +202,9 @@
     }
   ],
   "post-processors": [
-    [
-      {
-        "type": "vagrant"
-      },
-      {
-        "type": "vagrant-cloud",
-        "box_tag": "surefoot/{{ build_name }}",
-        "access_token": "{{ user `ATLAS_TOKEN` }}",
-        "version": "{{ user `version` }}-{{ timestamp }}"
-      }
-    ]
+    {
+      "type": "vagrant"
+    }
   ]
 }
 
