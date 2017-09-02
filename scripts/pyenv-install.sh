@@ -14,7 +14,7 @@ eval "$(pyenv virtualenv-init -)"
 #Install python 2 and 3
 
 if [ ! -z ${PY_VERSIONS+x} ]; then
-  for version in ${PY_VERSIONS//,/}; do
+  for version in ${PY_VERSIONS//,/ }; do
     pyenv install $version
   done
 else

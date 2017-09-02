@@ -210,8 +210,8 @@
         "type": "vagrant-cloud",
         "box_tag": "surefoot/{{ build_name }}",
         "access_token": "{{ user `ATLAS_TOKEN` }}",
-        "version": "{{ user `version` }}",
-        "version_description": ""
+        "version": "{{ user `vb_version` }}",
+        "version_description": "* Virtualbox {{ user `vb_version` }} Guest Additions\n* [pyenv](https://github.com/pyenv/pyenv) with python versions: {{ user `PY_VERSIONS` }}\n"
       }
     ]
   ]
