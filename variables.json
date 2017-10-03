@@ -2,10 +2,10 @@
   "Centos6_iso_url" : "http://mirrors.kernel.org/centos/6.9/isos/x86_64/CentOS-6.9-x86_64-minimal.iso",
   "Centos6_iso_checksum_url" : "http://mirrors.kernel.org/centos/6/isos/x86_64/sha1sum.txt",
   "Centos6_iso_checksum_type" : "sha1",
-  "Centos7_iso_url" : "http://mirrors.kernel.org/centos/7/isos/x86_64/CentOS-7-x86_64-Minimal-1611.iso",
-  "Centos7_iso_checksum" : "71a7aa147877b413497cdff5b1e0aa5bc0c9484f",
+  "Centos7_iso_url" : "http://mirrors.kernel.org/centos/7/isos/x86_64/CentOS-7-x86_64-Minimal-1708.iso",
+  "Centos7_iso_checksum_url": "http://mirrors.tummy.com/mirrors/CentOS/7/isos/x86_64/sha1sum.txt",
   "Centos7_iso_checksum_type" : "sha1",
-  "PY_VERSIONS" : "2.7.13, 3.6.2",
-  "vb_version": "5.1.26"
+  "PY_VERSIONS" : "2.7.14, 3.6.2",
+  "vb_version": "5.1.28"
 }
 

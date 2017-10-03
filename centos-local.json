@@ -82,7 +82,7 @@
       ],
       "http_directory": "http",
       "iso_url": "{{user `Centos7_iso_url`}}",
-      "iso_checksum": "{{user `Centos7_iso_checksum`}}",
+      "iso_checksum_url": "{{user `Centos7_iso_checksum_url`}}",
       "iso_checksum_type": "{{user `Centos7_iso_checksum_type`}}",
       "boot_wait": "10s",
       "boot_command": [
@@ -164,7 +164,7 @@
       ],
       "http_directory": "http",
       "iso_url": "{{user `Centos7_iso_url`}}",
-      "iso_checksum": "{{user `Centos7_iso_checksum`}}",
+      "iso_checksum_url": "{{user `Centos7_iso_checksum_url`}}",
       "iso_checksum_type": "{{user `Centos7_iso_checksum_type`}}",
       "boot_wait": "10s",
       "boot_command": [
